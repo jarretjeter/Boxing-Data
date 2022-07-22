@@ -1,28 +1,36 @@
-# _{Boxing-Data}_
+# Boxing-Data
 
 #### By _**{List of contributors}**_
 
-#### _{Brief description of application}_
+#### This project extracts data from Boxrec.com such as boxer information(all boxers? boxers from select amount of countries?) and event location, to gain insights (the average fighter’s career length and amount of fights, number of active fighters over time, the number of events for the month for certain locations, anything else interesting I can think of)
 
-## MVP
+## Rough Draft
 
-* Minimum
-* Viable
-* Project
+### MVP
 
-## Stretch Goals
+* elt
+* table of boxers
+* table of events
+* orchestration via airflow
+* data visualizations
 
-* Ideas to
+### Stretch Goals
+
+* front end page??
 * implement
 * after
 * MVP
 
-## Technologies Used
+### Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* python
+* airflow
+* pandas?
+* spark?
+* dbt
+* beautifulsoup?
+* google bigquery
+* google data studio
 
 ## Description
 
