@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+<meta content="Find Boxers and other people" name="description"/>
+<title>
+							BoxRec: Search
+					</title>
+<link href="https://boxrec.com/en/search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit" rel="canonical"/>
+<link href="/build/images/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon" sizes="57x57"/>
+<link href="/build/images/favicons/apple-touch-icon-60x60.png" rel="apple-touch-icon" sizes="60x60"/>
+<link href="/build/images/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72"/>
+<link href="/build/images/favicons/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76"/>
+<link href="/build/images/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114"/>
+<link href="/build/images/favicons/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120"/>
+<link href="/build/images/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144"/>
+<link href="/build/images/favicons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152"/>
+<link href="/build/images/favicons/apple-touch-icon-180x180.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/build/images/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/build/images/favicons/android-chrome-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/build/images/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
+<link href="/build/images/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<meta content="#af0a00" name="msapplication-TileColor"/>
+<meta content="#ffffff" name="theme-color"/>
+<link href="/build/images/favicons/favicon.ico" rel="shortcut icon">
+<link href="//fonts.googleapis.com/css?family=Roboto:light,regular,medium,thin,italic,mediumitalic,bold" rel="stylesheet" title="roboto"/>
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" rel="stylesheet">
+<link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" referrerpolicy="no-referrer" rel="stylesheet">
+<link href="/build/app_d.f6e0eb7a.css" rel="stylesheet"/>
+<!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+<script async="true" type="text/javascript">
+(function() {
+  var host = 'boxrec.com';
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://quantcast.mgr.consensu.org'
+    .concat('/choice/', 'ejspNYRAmW48a', '/', host, '/choice.js')
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            event.source.postMessage(returnMsg, '*');
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();
+</script>
+<!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) --> <script data-cfasync="false" type="text/javascript">
+
+					var freestar = freestar || {};
+					freestar.hitTime = Date.now();
+					freestar.queue = freestar.queue || [];
+					freestar.config = freestar.config || {};
+					freestar.debug = window.location.search.indexOf('fsdebug') === -1 ? false : true;
+					freestar.config.enabled_slots = [];
+					!function (a, b) {
+					var c = b.getElementsByTagName("script")[0],
+					d = b.createElement("script"),
+					e = "https://a.pub.network/boxrec-com";
+					e += freestar.debug ? "/qa/pubfig.min.js" : "/pubfig.min.js",
+					d.async = !0,
+					d.src = e,
+					c.parentNode.insertBefore(d, c)
+					}(window, document);
+
+					freestar.initCallback = function () {
+					freestar.newAdSlots(freestar.config.enabled_slots)
+					}
+					freestar.queue.push(function () { // One value only
+					googletag.pubads().setTargeting('PageType', ['homepage']);
+					});
+				</script>
+</link></link></link></head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+<script src="/build/runtime.d41d8cd9.js"></script><script src="/build/app_d.d8b6da5f.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<!--Google Analytics-->
+<script>
+				(function (i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+				},
+				i[r].l = 1 * new Date();
+				a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+				})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+				ga('create', 'UA-80667-1', 'auto');
+				ga('send', 'pageview');ga('set', 'userId', '121664');			</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-ZSWWSSWHLM"></script>
+<script>
+				window.dataLayer = window.dataLayer || [];
+				function gtag(){dataLayer.push(arguments);}
+				gtag('js', new Date());
+
+				gtag('config', 'G-ZSWWSSWHLM');
+			</script>
+<div class="modalWindow" data-base-url="/en/" id="modalWindow">
+<div class="modalWindowInner">
+<i class="fas fa-times-circle window-close" onclick="$('#modalWindow').hide();$('#popupMenuBack').hide();$('#modalWindowContent').html('');"></i>
+<div id="modalWindowLoading"></div>
+<div id="modalWindowContent"></div>
+</div>
+</div>
+<div class="popupMenuBack" id="popupMenuBack" onclick="$(this).hide();$('.actionsDivLeft, .actionsDivRight, #qsCon').hide();$('#pageOuter').css({ paddingTop: '0' });$('#sticky').css({zIndex:'99'});"></div>
+<div class="headerOuter">
+<div class="header">
+<a href="/en">
+<div class="logo"></div>
+</a>
+<div class="navUserBox">
+<a href="/en/support">support</a>
+    
+
+  <a href="https://boxrec.com/wiki/">
+    wiki
+  </a>
+    
+      <a href="https://boxrec.com/forum/ucp.php?mode=login&amp;login=external&amp;oauth_service=boxrecauth&amp;device=d">forum</a>
+  
+
+      
+
+      <a class="userProfile" href="/en/my_details" style="font-weight:bold;">
+<i class="fas fa-user-circle" style="color:#c70300 !important;font-size:26px !important;position:relative;top:5px;"></i>
+</a>
+<a class="lozengeButton" href="/logout" style="font-weight:bold;margin-left:15px;">
+      logout
+    </a>
+</div>
+</div>
+</div>
+<div id="sticky">
+<div class="navBarOuter" id="navBarOuter">
+<div class="navBar">
+<div class="navLinks" style="position:relative;">
+<form action="/en/quick_search" method="post" name="si">
+<div class="searchBox" style="position:absolute;z-index:202;padding-right:19px;margin:0 20px 0 0px;">
+<input autocomplete="off" class="inputSearchBox" id="si_search_text" name="si[search_text]" onblur='setTimeout(function(){ $("#roleSelector").hide(); changeCorners();}, 500); ' placeholder="search name or ID#" size="20" type="text"/>
+<button class="searchSubmitButton searchSubmitButtonNavbar" id="go" name="go" type="submit"><i class="fas fa-search" style="position:relative;font-size: 18px;color:#a10200 !important;padding-left:4px;"></i></button>
+</div>
+<div class="checkRadioContainer" id="roleSelector">
+<div id="suggest_results"></div>
+<div style="font-weight:bold;padding:5px;">search:</div>
+<label class="search_text_label" onclick="sendForm();">
+<input id="si_search_role" name="si[search_role]" type="radio" value=""/>
+<i class="fa fa-search"></i>
+<span class="search_js_text"></span><span class="searchOption">all</span>
+</label>
+<label class="search_text_label" onclick="sendForm();">
+<input id="si_search_role" name="si[search_role]" type="radio" value="fighters"/>
+<i class="fa fa-search"></i>
+<span class="search_js_text"></span><span class="searchOption">fighters</span>
+</label>
+<label class="search_text_label" onclick="sendForm();">
+<input id="si_search_role" name="si[search_role]" type="radio" value="official"/>
+<i class="fa fa-search"></i>
+<span class="search_js_text"></span><span class="searchOption">officials</span>
+</label>
+<label class="search_text_label" onclick="sendForm();">
+<input id="si_search_role" name="si[search_role]" type="radio" value="manager"/>
+<i class="fa fa-search"></i>
+<span class="search_js_text"></span><span class="searchOption">managers</span>
+</label>
+<label class="search_text_label" onclick="sendForm();">
+<input id="si_search_role" name="si[search_role]" type="radio" value="matchmaker"/>
+<i class="fa fa-search"></i>
+<span class="search_js_text"></span><span class="searchOption">matchmakers</span>
+</label>
+<label class="search_text_label" onclick="sendForm();">
+<input id="si_search_role" name="si[search_role]" type="radio" value="promoter"/>
+<i class="fa fa-search"></i>
+<span class="search_js_text"></span><span class="searchOption">promoters</span>
+</label>
+</div>
+</form>
+<div class="navItem" style="margin-left:225px;">
+<a href="/en/ratings">ratings</a>
+</div>
+<div class="navItem">
+<a href="/en/schedule">schedule</a>
+</div>
+<div class="navItem">
+<a href="/en/results">results</a>
+</div>
+<div class="navItem">
+<a href="/en/date">date</a>
+</div>
+<div class="navItem">
+<a href="/en/champions">champions</a>
+</div>
+<div class="navItem">
+<a href="/en/locations/people">locate people</a>
+</div>
+<div class="navItem">
+<a href="/en/locations/event">locate events</a>
+</div>
+<div class="navItem">
+<a href="/en/titles">titles</a>
+</div>
+<div class="navItem" style="float:right;position:relative;top:-5px;padding-left:0;" title="scoring">
+<a href="/en/my_scores">
+<span class="fa-layers fa-fw" style="margin:0 !important;width:35px;">
+<i class="fas fa-elevator"></i>
+<span class="fa-layers-text" style="margin:0 !important;width:35px;">score</span>
+</span>
+</a></div>
+<div class="navItem" style="float:right;position:relative;top:-5px;padding-left:0;" title="following">
+<a href="/en/watchlist">
+<span class="fa-layers fa-fw" style="margin:0 !important;width:35px;">
+<i class="far fa-eye"></i>
+<span class="fa-layers-text" style="margin:0 !important;width:35px;">follow</span>
+</span>
+</a>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="pageOuter" id="pageOuter">
+<div class="page">
+<div style="width:100%;text-align:left;padding:10px 0;margin-bottom:10px;">
+<a href="https://boxrec.com/en/search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit" style="font-weight:bold;">Search All Fighters</a>
+</div>
+<div class="titleBar">
+</div>
+<div class="topAd">
+<div class="advertLeaderboard" style="min-height:90px;min-width:728px;width:auto;height:auto;background-color:transparent;">
+<div id="boxrec_Leaderboard_ATF_Desktop">
+<script data-cfasync="false" type="text/javascript">
+            freestar.config.enabled_slots.push({
+              placementName: "boxrec_Leaderboard_ATF_Desktop",
+              slotId: "boxrec_Leaderboard_ATF_Desktop"
+            });
+          </script>
+</div>
+</div>
+<br/>
+<div class="clear"></div>
+</div>
+<div style="position:absolute;left:20px;">
+<div class="advertMPU" id="boxrec_300x250_1_Desktop">
+<script data-cfasync="false" type="text/javascript">
+          freestar.config.enabled_slots.push({
+            placementName: "boxrec_300x250_1_Desktop",
+            slotId: "boxrec_300x250_1_Desktop"
+          });
+        </script>
+</div>
+</div>
+<div style="width:100%;min-height:250px;overflow:visible;padding-top:20px;">
+<div class="pageTitleBox"></div>
+<div class="fluidFilterBox">
+<form action="/en/search" id="p" method="get" name="p">
+<div class="formCellVert">
+<input class="inputBox" id="p_first_name" name="p[first_name]" placeholder="first name" tabindex="1" type="text" value="*"/>
+</div>
+<div class="formCellVert">
+<input class="inputBox" id="p_last_name" name="p[last_name]" placeholder="last name" tabindex="2" type="text" value="*"/>
+</div>
+<div class="formCellVert">
+<select class="selectBox" id="p_role" name="p[role]" style="padding-right:22px;width:162px;" tabindex="3"> <option value="">all</option><optgroup label="fighters">
+<option selected="selected" value="fighters">all fighters</option> <option value="box-pro">Pro Boxer</option> <option value="box-am">Amateur Boxer</option> <option value="kb-pro">Pro Kickboxer</option> <option value="kb-am">Amateur Kickboxer</option> <option value="mt-pro">Pro Muay Thai Boxer</option> <option value="mt-am">Amateur Muay Thai Boxer</option> <option value="bk-pro">Bare knuckle Boxer</option></optgroup> <option value="official">officials</option> <option value="doctor">doctor</option> <option value="inspector">inspector</option> <option value="judge">judge</option> <option value="manager">manager</option> <option value="matchmaker">matchmaker</option> <option value="promoter">promoter</option> <option value="referee">referee</option> <option value="supervisor">supervisor</option></select>
+<span class="select-icon">
+<i class="fas fa-caret-down select-arrow"></i>
+</span>
+</div>
+<div class="formCellVert">
+<div class="searchRadio" id="p_status" tabindex="5"><input checked="checked" id="p_status_0" name="p[status]" type="radio" value=""/><label for="p_status_0">all</label><input id="p_status_1" name="p[status]" type="radio" value="a"/><label for="p_status_1">active</label></div>
+</div>
+<div style="float:left;">
+<input class="submitButton" name="pf_go" onclick="$('#p_orderBy').val('');$('#p_orderDir').val('ASC');" type="submit" value="submit"/>
+</div>
+<input id="p_orderBy" name="p[orderBy]" type="hidden"><input id="p_orderDir" name="p[orderDir]" type="hidden" value="ASC"/></input></form>
+</div>
+</div>
+
+
+<div class="clear"></div>
+<div class="tableInfoTop">
+<div style="float:left;padding:0px 8px 0 0;">
+<span class="pagerResults">875,578 people</span>  •  <span class="pagerText">page</span> <div class="pagerElement"><span class="pagerCurrent">1</span></div><div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=25" onclick="">2</a></div><div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=50" onclick="">3</a></div>... <div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=437775" onclick="">17,512</a></div> ...<div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=875550" onclick="">35,023</a></div><div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=875575" onclick="">35,024</a></div><div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=25" onclick="">&gt;</a></div><input class="inputBox" length="5" onchange='return doPagination($(this).val(),35024,25,"","search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;")' placeholder="page#" size="5" type="text"/>
+</div>
+<div class="clear"></div>
+</div>
+<div class="overflowScroll" style="padding-bottom:20px;"><table align="center" border="0" cellpadding="0" cellspacing="0" class="dataTable" id="ACzDIx" width="100%"><thead><tr><th></th><th>role</th><th>w-l-d</th><th><div style="text-align:left;">last 6</div></th><th>career</th><th>division</th><th>residence</th><th><a href="javascript:void(0);" onclick="return genericModal('/en/faq/explain/glossary')" style="float:right;position:relative;top:-2px;">
+<i class="fas fa-circle-info" style="font-size:20px;margin-right:5px;color: #008bcf !important;"></i>
+</a></th></tr></thead><tbody><tr class="oddRow" id="se0"><td class="drawRowBorder"> <span class="flag-icon flag-icon-ma" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/540164">Abdelkader </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/540164">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2009-2009
+<br/></td><td class="drawRowBorder">  super middle
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-es" style="margin-right: 3px"></span><a href="/en/locations/event?level=r&amp;level_id=103&amp;loc_txt=Islas%20Canarias">Islas Canarias</a>, <a href="/en/locations/event?level=c&amp;level_id=ES&amp;loc_txt=Spain">Spain</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se1"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/750997">Abdi </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/750997">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">5</span> <span class="textLost">3</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2016-2018
+<br/></td><td class="drawRowBorder">  feather
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se2"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/761866">Abdullah </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/761866">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2016-2016
+<br/></td><td class="drawRowBorder">  bantam
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se3"><td class="drawRowBorder"> <span class="flag-icon flag-icon-pk" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/865806">Abdullah </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/865806">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">2</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2019-2019
+<br/></td><td class="drawRowBorder">  super welter
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-pk" style="margin-right: 3px"></span><a href="/en/locations/event?level=t&amp;level_id=54061&amp;loc_txt=Gharshin">Gharshin</a>, <a href="/en/locations/event?level=c&amp;level_id=PK&amp;loc_txt=Pakistan">Pakistan</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se4"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/579074">Abdullah </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/579074">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2009-2009
+<br/></td><td class="drawRowBorder">  super feather
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se5"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/398947">Abudanto </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/398947">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">1</span> <span class="textLost">0</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2006-2006
+<br/></td><td class="drawRowBorder"><br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=t&amp;level_id=7928&amp;loc_txt=Purwokerto">Purwokerto</a>, <a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se6"><td class="drawRowBorder"> <span class="flag-icon flag-icon-cn" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/744579">Abudusong </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/744579">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2016-2016
+<br/></td><td class="drawRowBorder">  welter
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-cn" style="margin-right: 3px"></span><a href="/en/locations/event?level=t&amp;level_id=40687&amp;loc_txt=Urumqi">Urumqi</a>, <a href="/en/locations/event?level=c&amp;level_id=CN&amp;loc_txt=China">China</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se7"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/640996">Aby </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/640996">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2010-2010
+<br/></td><td class="drawRowBorder"><br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se8"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/826188">Adam </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/826188">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">1</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2018-2018
+<br/></td><td class="drawRowBorder">  bantam
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se9"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/196055">Adeng </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/196055">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">0</span> <span class="textDraw">1</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgD" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2003-2003
+<br/></td><td class="drawRowBorder">  light fly
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se10"><td class="drawRowBorder"> <span class="flag-icon flag-icon-us" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/773160">Adolf </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/773160">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+1927-1927
+<br/></td><td class="drawRowBorder">  middle
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-us" style="margin-right: 3px"></span><a href="/en/locations/event?level=t&amp;level_id=20628&amp;loc_txt=New%20York">New York</a>, <a href="/en/locations/event?level=r&amp;level_id=478&amp;loc_txt=New%20York">New York</a>, <a href="/en/locations/event?level=c&amp;level_id=US&amp;loc_txt=USA">USA</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se11"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/448231">Adrigo </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/448231">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">1</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2007-2008
+<br/></td><td class="drawRowBorder">  minimum
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se12"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/436557">Ady </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/436557">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2008-2008
+<br/></td><td class="drawRowBorder"><br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se13"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/212177">Afriadin </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/212177">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">4</span> <span class="textLost">3</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2003-2005
+<br/></td><td class="drawRowBorder">  super bantam
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se14"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/569299">Afrizal </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/569299">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">2</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2008-2016
+<br/></td><td class="drawRowBorder">  light fly
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se15"><td class="drawRowBorder"> <span class="flag-icon flag-icon-cn" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/454117">Aguli </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/454117">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2008-2008
+<br/></td><td class="drawRowBorder">  super bantam
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-cn" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=CN&amp;loc_txt=China">China</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se16"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/860746">Agus </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/860746">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">2</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2018-2018
+<br/></td><td class="drawRowBorder">  fly
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se17"><td class="drawRowBorder"> <span class="flag-icon flag-icon-id" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/355594">Agus </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/355594">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">2</span> <span class="textLost">2</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2004-2006
+<br/></td><td class="drawRowBorder"><br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-id" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=ID&amp;loc_txt=Indonesia">Indonesia</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se18"><td class="drawRowBorder"> <span class="flag-icon flag-icon-cn" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/770263">Aikeremujiang </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/770263">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">4</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2016-2017
+<br/></td><td class="drawRowBorder">  light
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-cn" style="margin-right: 3px"></span><a href="/en/locations/event?level=t&amp;level_id=40687&amp;loc_txt=Urumqi">Urumqi</a>, <a href="/en/locations/event?level=c&amp;level_id=CN&amp;loc_txt=China">China</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se19"><td class="drawRowBorder"> <span class="flag-icon flag-icon-cn" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/765874">Aisikaer </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/765874">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2016-2016
+<br/></td><td class="drawRowBorder">  light heavy
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-cn" style="margin-right: 3px"></span><a href="/en/locations/event?level=t&amp;level_id=40687&amp;loc_txt=Urumqi">Urumqi</a>, <a href="/en/locations/event?level=c&amp;level_id=CN&amp;loc_txt=China">China</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se20"><td class="drawRowBorder"> <span class="flag-icon flag-icon-in" style="margin-right: 5px"></span><a class="personLink" href="/en/box-am/1076122">Akanksha </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-am"><a href="/en/box-am/1076122">Box-am</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">2</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2013-2013
+<br/></td><td class="drawRowBorder">  super light
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-in" style="margin-right: 3px"></span><a href="/en/locations/event?level=c&amp;level_id=IN&amp;loc_txt=India">India</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se21"><td class="drawRowBorder"> <span class="flag-icon flag-icon-in" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/865140">Akash </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/865140">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">3</span> <span class="textLost">3</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgW" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2018-2022
+<br/></td><td class="drawRowBorder">  super fly
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-in" style="margin-right: 3px"></span><a href="/en/locations/event?level=t&amp;level_id=33454&amp;loc_txt=Delhi">Delhi</a>, <a href="/en/locations/event?level=c&amp;level_id=IN&amp;loc_txt=India">India</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se22"><td class="drawRowBorder"> <span class="flag-icon flag-icon-jp" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/373616">Akki </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/373616">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+2006-2006
+<br/></td><td class="drawRowBorder"><br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-jp" style="margin-right: 3px"></span><a href="/en/locations/event?level=r&amp;level_id=267&amp;loc_txt=Okayama">Okayama</a>, <a href="/en/locations/event?level=c&amp;level_id=JP&amp;loc_txt=Japan">Japan</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr id="se23"><td class="drawRowBorder"> <span class="flag-icon flag-icon-us" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/277279">Al </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/277279">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+1925-1925
+<br/></td><td class="drawRowBorder">  feather
+<br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-us" style="margin-right: 3px"></span><a href="/en/locations/event?level=r&amp;level_id=479&amp;loc_txt=Ohio">Ohio</a>, <a href="/en/locations/event?level=c&amp;level_id=US&amp;loc_txt=USA">USA</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr><tr class="oddRow" id="se24"><td class="drawRowBorder"> <span class="flag-icon flag-icon-us" style="margin-right: 5px"></span><a class="personLink" href="/en/box-pro/568171">Al </a><br/></td><td class="drawRowBorder"><div class="roleDiv box-pro"><a href="/en/box-pro/568171">Box-pro</a></div>
+</td><td class="drawRowBorder"> <span class="textWon">0</span> <span class="textLost">1</span> <span class="textDraw">0</span>
+<br/></td><td class="drawRowBorder"><div style="float:left;"> <div style="height:6px;line-height:6px;margin:0;padding:0;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-4px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-8px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div class="bgL" style="display:inline-block;height:8px;width:6px;margin-left:2px;border-radius: 10px;"></div></div><div style="height:6px;line-height:6px;margin:0;padding:0;position:relative;top:-12px;"><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div><div style="display:inline-block;height:8px;width:6px;margin-left:2px;"></div></div>
+</div><div style="clear:both;"></div></td><td class="drawRowBorder" nowrap="">        
+        
+1936-1936
+<br/></td><td class="drawRowBorder"><br/></td><td class="drawRowBorder"><span class="flag-icon flag-icon-us" style="margin-right: 3px"></span><a href="/en/locations/event?level=r&amp;level_id=465&amp;loc_txt=Maine">Maine</a>, <a href="/en/locations/event?level=c&amp;level_id=US&amp;loc_txt=USA">USA</a></td><td class="actionCell drawRowBorder" nowrap="" style="position:relative;"></td></tr></tbody></table></div>
+<div class="tableInfoBottom">
+<div style="float:left;padding:0px 8px 0 0;">
+<span class="pagerResults">875,578 people</span>  •  <span class="pagerText">page</span> <div class="pagerElement"><span class="pagerCurrent">1</span></div><div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=25" onclick="">2</a></div><div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=50" onclick="">3</a></div>... <div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=437775" onclick="">17,512</a></div> ...<div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=875550" onclick="">35,023</a></div><div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=875575" onclick="">35,024</a></div><div class="pagerElement"><a class="alt" href="search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;offset=25" onclick="">&gt;</a></div><input class="inputBox" length="5" onchange='return doPagination($(this).val(),35024,25,"","search?p%5Bfirst_name%5D=%2A&amp;p%5Blast_name%5D=%2A&amp;p%5Brole%5D=fighters&amp;p%5Bstatus%5D=&amp;p%5BorderBy%5D=&amp;p%5BorderDir%5D=ASC&amp;pf_go=submit&amp;")' placeholder="page#" size="5" type="text"/>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footerAd">
+<div>
+<div id="boxrec_Leaderboard_BTF_Desktop">
+<script data-cfasync="false" type="text/javascript">
+            freestar.config.enabled_slots.push({
+              placementName: "boxrec_Leaderboard_BTF_Desktop",
+              slotId: "boxrec_Leaderboard_BTF_Desktop"
+            });
+          </script>
+</div>
+</div>
+<br/>
+</div>
+</div>
+</div>
+<a id="topBtn" onclick="topFunction()" title="Go to top">
+<i class="fas fa-arrow-up" style="color:#fff !important;font-size:20px;left:16px;top:14px;position:relative;"></i>
+</a>
+<div class="footerTopOuter">
+<div class="footer">
+					©BoxRec : data may be incomplete/inaccurate
+
+ : 
+<a class="alt" href="/en/editors">Editors</a>  
+<a class="alt" href="/en/about">About BoxRec</a>  
+<a class="alt" href="/en/contact_us">Contact Us</a>  
+<a class="alt" href="/en/terms_conditions">Terms &amp; Conditions</a>  
+<a class="alt" href="/en/widgets">Widgets</a>  
+				</div>
+</div>
+<div class="footerOuter">
+<div class="footer" style="padding-bottom:80px;">
+					BoxRec.com uses cookies, <a class="alt" href="/en/terms_conditions#cookies">find out more</a>
+<br/><br/>
+<a class="alt" href="/en/search">
+<span class="flag-icon flag-icon-gb" style="margin-right: 5px"></span>EN
+  </a>   
+  <a class="alt" href="/cn/search">
+<span class="flag-icon flag-icon-cn" style="margin-right: 5px"></span>CN
+  </a>   
+  <a class="alt" href="/de/search">
+<span class="flag-icon flag-icon-de" style="margin-right: 5px"></span>DE
+  </a>   
+  <a class="alt" href="/es/search">
+<span class="flag-icon flag-icon-es" style="margin-right: 5px"></span>ES
+  </a>   
+  <a class="alt" href="/fr/search">
+<span class="flag-icon flag-icon-fr" style="margin-right: 5px"></span>FR
+  </a>   
+  <a class="alt" href="/pl/search">
+<span class="flag-icon flag-icon-pl" style="margin-right: 5px"></span>PL
+  </a>   
+  <a class="alt" href="/ru/search">
+<span class="flag-icon flag-icon-ru" style="margin-right: 5px"></span>RU
+  </a>
+<br/><br/><br/><br/>
+</div>
+</div>
+<div class="js-d" data-js-d="si"></div>
+<div class="js-a" data-js-a="1"></div>
+<div class="js-device" data-js-device="d"></div>
+<script>
+
+    $(document).ready(function(){
+
+        $('#p_role').select2();
+      });
+    </script>
+<script>
+		function changeCorners(){
+  if($('#roleSelector:visible').length == 0){
+    $('.searchBox').css('-webkit-border-radius','14px')
+    $('.searchBox').css('-moz-border-radius','14px')
+    $('.searchBox').css('border-radius','14px')
+  }
+  else{
+    $('.searchBox').css('-webkit-border-radius','14px 14px 0px 0px')
+    $('.searchBox').css('-moz-border-radius','14px 14px 0px 0px')
+    $('.searchBox').css('border-radius','14px 14px 0px 0px')
+  }
+}
+
+function sendForm(){
+  $('form[name="si"]').submit();
+}
+
+function delayKeypress(callback, ms) {
+  var timer = 0;
+  return function() {
+    var context = this, args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      callback.apply(context, args);
+    }, ms || 0);
+  };
+}
+
+function doSearch() {
+  if($('#si_search_text').val().length>=4) {
+      $.ajax({
+      type: "get",
+      url: '\/en\/suggest_search?date=now&t='+$('#si_search_text').val(),
+      cache: false,
+      traditional: true,
+      success: function(res){
+
+        $('#suggest_results').html(res);
+        $('#suggest_results').show();
+      },
+      error: function(jqXHR, textStatus, errorThrown){
+        //alert('Error with request..'+textStatus +'\n'+errorThrown);
+      }
+
+    });
+  }
+}
+
+$('#si_search_text').keyup(delayKeypress(function (e) {
+  e.preventDefault();
+    $('#suggest_results').text('');
+    doSearch();
+  }, 100));
+
+$('#si_search_text').on('input', function(){
+
+  if($('#si_search_text').val() != '' && $('#si_search_text').val() != null){
+    if($('#roleSelector:visible').length == 0){
+      $("#roleSelector").show();
+      changeCorners();
+    }
+    if(!isNaN($('#si_search_text').val())) {
+      $('.search_text_num').show();
+      $('#suggest_results').hide();
+    } else {
+      $('.search_text_num').hide();
+
+    }
+  };
+
+  $(".search_js_text").each(function(i){
+    $(".search_js_text").html("<b>" + $('#si_search_text').val() + "</b>&nbsp;&nbsp;")
+    if($('#si_search_text').val() == null || $('#si_search_text').val() == '')
+      $(".search_js_text").html('');
+
+
+  })
+})
+
+$('#si_search_text').on('click', function(){
+
+  if($('#si_search_text').val() != '' && $('#si_search_text').val() != null){
+    if($('#roleSelector:visible').length == 0){
+      $("#roleSelector").show();
+      changeCorners();
+    }
+  };
+
+  $(".search_js_text").each(function(i){
+    $(".search_js_text").html("<b>" + $('#si_search_text').val() + "</b>&nbsp;&nbsp;")
+    if($('#si_search_text').val() == null || $('#si_search_text').val() == '')
+      $(".search_js_text").html('');
+
+
+  })
+})
+
+$(".search_js_text").html("<b>" + $('#si_search_text').val() + "</b>&nbsp;&nbsp;")
+    if($('#si_search_text').val() == null || $('#si_search_text').val() == '')
+      $(".search_js_text").html('');
+
+
+function scrollFunction() {
+if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) { // document.getElementById("topBtn").style.display = "block";
+$('#topBtn').fadeIn();
+} else { // document.getElementById("topBtn").style.display = "none";
+$('#topBtn').fadeOut();
+}
+}
+
+function topFunction() {
+document.body.scrollTop = 0;
+document.documentElement.scrollTop = 0;
+}
+$('#modalWindow').click(function (e) {
+if (e.target.id == 'modalWindow') {
+$('#modalWindow').hide();
+$('#popupMenuBack').hide();
+}
+});
+
+$(document).ready(function () {
+$("#sticky").sticky({topSpacing: 0, className: 'sticked'});
+
+$("a").find('.fa-fw').each(function () {
+$(this).parent().css('text-decoration', 'none');
+$(this).parent().parent().css('text-decoration', 'none');
+})
+
+$('.select-icon').on('click', function () {
+$(this).closest('.styledSelect').find('.selectBox').click();
+});
+
+});
+
+window.onscroll = function () {
+scrollFunction()
+};
+
+		</script>
+</body>
+</html>
+
