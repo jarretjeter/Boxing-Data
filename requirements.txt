@@ -1,5 +1,8 @@
 beautifulsoup4==4.11.1
+cloudscraper
 dbt-bigquery
 google-cloud-bigquery==2.18.0
 notebook==6.3.0
 requests==2.28.1
+selenium
+urllib3
