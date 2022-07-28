@@ -1,8 +1,8 @@
-# Boxing-Data
+# Boxing Web Scrape Data
 
-#### By _**{List of contributors}**_
+#### By Jarret Jeter
 
-#### This project extracts data from Boxrec.com such as boxer information(all boxers? boxers from select amount of countries?) and event location, to gain insights (the average fighter’s career length and amount of fights, number of active fighters over time, the number of events for the month for certain locations, anything else interesting I can think of)
+#### This project extracts data from boxrec such as boxer information(all boxers? boxers from select amount of countries?) to gain insights (the average fighter’s career length and amount of fights, anything else interesting I can think of)
 
 ## Rough Draft
 
@@ -10,31 +10,26 @@
 
 * elt
 * table of boxers
-* table of events
-* orchestration via airflow
 * data visualizations
 
 ### Stretch Goals
 
-* front end page??
-* implement
-* after
-* MVP
+* airflow
+* table of events
+* front end page?
 
 ### Technologies Used
 
 * python
-* airflow
-* pandas?
-* spark?
-* dbt
-* beautifulsoup?
+* pandas
+* beautifulsoup
+* cloudscraper
 * google bigquery
 * google data studio
 
 ## Description
 
-_{This is a detailed description of your application. Give as much detail as needed to explain what the application does as well as any other information you want users or other developers to have.}_
+The project relies first and foremost on cloudscraper and Beautifulsoup to parse data extracted from the search results of fighters on boxrec. Unfortunately I am unable to automate the search process because of the site's antibot technology, so I must manually log in first. After getting access, I create a soup object with Beautifulsoup to parse the table row html tags to find information(fighter id, name, country, etc). The specific data is then used by small functions that are called on by a larger function to create a dataframe out of the collected data. Afterwards there is some cleaning involved before saving to a csv file and loading into BigQuery. This was my first real effort at web scraping and it was very difficult narrowing down what I wanted from the unstructured data.
 
 ## Setup/Installation Requirements
 
@@ -55,4 +50,4 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 _{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
 
-Copyright (c) _date_ _author name(s)_
+_Copyright(c) 07/28/2022 Jarret Jeter_
