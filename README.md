@@ -12,7 +12,13 @@
 #### This project uses webscraping to extract the data of boxers from the international boxrec website such as the boxer's name, fight record, career length and location. Currently there are constraints on this process because the data is not easy to get access to. Use at your own risk! This could get your IP address banned from boxrec if sending too many GET requests and be careful about slowing their site down.
 <br/>
 
+Process Diagram
 ![diagram](./img/boxrec_scrape.drawio.png)
+<br/>
+
+Data visual of a small sample
+![visualization](./img/Boxing_Data.png)
+<br/>
 
 ### Technologies Used
 
